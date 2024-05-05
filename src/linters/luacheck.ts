@@ -4,7 +4,7 @@ import {
   LinterOffenseSeverity,
 } from "vscode-linter-api";
 
-const lineMatcher = /^stdin:(\d+):(\d+)-(\d+): \((.*?)\) (.+)$/;
+const lineMatcher = /^.+?:(\d+):(\d+)-(\d+): \((.*?)\) (.+)$/;
 
 export const getOffenses: LinterGetOffensesFunction = ({ stdout, uri }) => {
   const offenses = stdout
